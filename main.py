@@ -73,3 +73,16 @@ for i in range(num_merges):
     print(vocab)
 
     print("--------------------------------------------------")
+
+
+    from transformers import AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("bert-base-multilingual-cased")
+
+frase = "Os hiper-parâmetros do transformer são inconstitucionalmente difíceis de ajustar."
+
+tokens = tokenizer.tokenize(frase)
+
+print("--------------------------------------------------")
+print("tokens wordpiece:")
+print(tokens)
