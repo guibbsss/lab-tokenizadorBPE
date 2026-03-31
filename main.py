@@ -55,3 +55,21 @@ print("melhor par:", best)
 vocab = merge_vocab(best, vocab)
 
 print(vocab)
+
+num_merges = 5
+
+for i in range(num_merges):
+
+    stats = get_stats(vocab)
+
+    best = max(stats, key=stats.get)
+
+    print("iteracao", i+1)
+    print("par escolhido:", best)
+
+    vocab = merge_vocab(best, vocab)
+
+    print("vocab atualizado:")
+    print(vocab)
+
+    print("--------------------------------------------------")
